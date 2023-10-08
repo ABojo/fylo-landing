@@ -1,0 +1,42 @@
+:root {
+  --color-intro-bg: hsl(217, 28%, 15%);
+  --color-main-bg: hsl(218, 28%, 13%);
+  --color-footer-bg: hsl(216, 53%, 9%);
+  --color-testimonials-bg: hsl(219, 30%, 18%);
+
+  --color-cyan-cta: hsl(176, 68%, 64%);
+  --color-blue-cta: hsl(198, 60%, 50%);
+  --color-error: hsl(0, 100%, 63%);
+  --color-white: hsl(0, 0%, 100%);
+
+  --ff-body: "Open Sans", sans-serif;
+  --ff-heading: "Raleway", sans-serif;
+
+  --fw-1: 400;
+  --fw-2: 700;
+
+  --fs-1: 2.5rem;
+  --fs-2: 2rem;
+  --fs-3: 1.25rem;
+  --fs-4: 1rem;
+  --fs-5: 0.875rem;
+  --fs-6: 0.625rem;
+  --fs-7: 0.5rem;
+
+  --lh-1: 1.875rem;
+  --lh-2: 1.5rem;
+  --lh-3: 1.3125rem;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--ff-body);
+  color: var(--color-white);
+}
