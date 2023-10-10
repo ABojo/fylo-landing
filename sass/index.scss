@@ -1,4 +1,6 @@
 @use "./components/header";
+@use "./components/hero";
+@use "./components/cta";
 
 :root {
   --color-intro-bg: hsl(217, 28%, 15%);

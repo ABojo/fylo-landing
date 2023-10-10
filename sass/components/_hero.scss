@@ -1,0 +1,38 @@
+.hero {
+  background-color: var(--color-intro-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 5rem;
+  padding-bottom: 13rem;
+  text-align: center;
+  background-image: url("../images/bg-curvy-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  &__graphic {
+    width: 45rem;
+  }
+
+  &__heading {
+    font-size: var(--fs-1);
+    color: var(--color-white);
+    max-width: 45rem;
+    font-weight: var(--fw-2);
+    font-family: var(--ff-heading);
+    margin-top: 2rem;
+    line-height: 3.75rem;
+  }
+
+  &__paragraph {
+    margin-top: 1.75rem;
+    font-size: var(--fs-3);
+    max-width: 39rem;
+    line-height: var(--lh-1);
+  }
+
+  &__cta {
+    margin-top: 2rem;
+  }
+}

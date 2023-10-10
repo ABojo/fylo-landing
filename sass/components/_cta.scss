@@ -1,0 +1,14 @@
+.cta {
+  text-decoration: none;
+  color: var(--color-white);
+  background-image: linear-gradient(to right, var(--color-cyan-cta), var(--color-blue-cta));
+  padding: 1rem 6rem;
+  border-radius: 2rem;
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-2);
+  transition: all 0.3s;
+
+  &:hover {
+    filter: brightness(120%);
+  }
+}
