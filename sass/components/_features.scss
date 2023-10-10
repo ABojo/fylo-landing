@@ -1,0 +1,39 @@
+@use "../abstracts/mixins" as *;
+
+.features {
+  @include layout-constrain;
+  text-align: center;
+  position: relative;
+  top: -2rem;
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    list-style-type: none;
+    max-width: 67rem;
+    width: 100%;
+    margin: 0 auto;
+    gap: 6rem;
+  }
+
+  &__item {
+  }
+
+  &__icon {
+    margin-bottom: 1.5rem;
+  }
+
+  &__heading {
+    font-size: var(--fs-3);
+    font-weight: var(--fw-2);
+    font-family: var(--ff-heading);
+    margin-bottom: 0.5rem;
+  }
+
+  &__paragraph {
+    font-size: var(--fs-5);
+    max-width: 22rem;
+    margin: 0 auto;
+  }
+}

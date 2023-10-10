@@ -1,6 +1,7 @@
 @use "./components/header";
 @use "./components/hero";
 @use "./components/cta";
+@use "./components/features";
 
 :root {
   --color-intro-bg: hsl(217, 28%, 15%);
@@ -46,4 +47,8 @@
 html {
   font-family: var(--ff-body);
   color: var(--color-white);
+}
+
+body {
+  background-color: var(--color-main-bg);
 }
