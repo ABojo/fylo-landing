@@ -2,6 +2,7 @@
 @use "./components/hero";
 @use "./components/cta";
 @use "./components/features";
+@use "./components/productive";
 
 :root {
   --color-intro-bg: hsl(217, 28%, 15%);
