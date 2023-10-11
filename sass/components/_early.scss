@@ -1,0 +1,67 @@
+@use "../abstracts/mixins" as *;
+
+.early {
+  background-color: var(--color-intro-bg);
+  @include layout-constrain;
+  max-width: 53rem;
+  text-align: center;
+  padding: 4rem;
+  box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 0.5rem;
+
+  &__heading {
+    font-size: var(--fs-2);
+    font-family: var(--ff-heading);
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    font-size: var(--fs-5);
+    margin: 0 auto;
+    max-width: 40rem;
+    margin-bottom: 2.5rem;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  &__input {
+    flex: 1;
+    position: relative;
+
+    input {
+      width: 100%;
+      padding: 1rem 2rem;
+      border-radius: 2rem;
+      font: inherit;
+      font-size: var(--fs-5);
+    }
+  }
+
+  &__submit {
+    border: none;
+    padding-inline: 2.5rem;
+    cursor: pointer;
+  }
+
+  &__error {
+    color: var(--color-error);
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    font-weight: var(--fw-2);
+    top: 110%;
+    font-size: var(--fs-6);
+    display: none;
+    opacity: 0;
+    transition: all 0.2s;
+  }
+
+  &__input--invalid &__error {
+    display: block;
+    opacity: 1;
+  }
+}
