@@ -1,0 +1,68 @@
+@use "../abstracts/mixins" as *;
+
+.testimonials {
+  @include layout-constrain;
+  max-width: 73rem;
+  padding-top: 11.5rem;
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    list-style-type: none;
+  }
+
+  &__card {
+    background-color: var(--color-testimonials-bg);
+    padding: 2.5rem 2.1rem;
+    border-radius: 4px;
+    box-shadow: 5px 5px 8px 4px rgba(56, 56, 56, 0.1);
+    position: relative;
+
+    &:first-of-type::before {
+      position: absolute;
+      display: block;
+      content: "";
+      height: 3.5rem;
+      width: 3.5rem;
+      background-image: url("../images/bg-quotes.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: -1;
+      top: -2rem;
+      left: -0.5rem;
+    }
+  }
+
+  &__text {
+    font-size: var(--fs-5);
+    line-height: var(--lh-3);
+    margin-bottom: 1.5rem;
+  }
+
+  &__profile {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-column-gap: 0.5rem;
+    align-items: center;
+    grid-template-areas: "img name" "img position";
+  }
+
+  &__img {
+    grid-area: img;
+    border-radius: 100%;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  &__name {
+    grid-area: name;
+    font-size: var(--fs-6);
+    font-weight: var(--fw-2);
+  }
+
+  &__position {
+    grid-area: position;
+    font-size: var(--fs-7);
+  }
+}
