@@ -66,4 +66,20 @@
     display: block;
     opacity: 1;
   }
+
+  &__success {
+    font-size: var(--fs-3);
+    display: none;
+    opacity: 0;
+    font-weight: var(--fw-2);
+  }
+
+  &--submitted &__success {
+    display: block;
+    opacity: 1;
+  }
+
+  &--submitted &__form {
+    display: none;
+  }
 }
