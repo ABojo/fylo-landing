@@ -2,16 +2,20 @@
 
 .hero {
   background-color: var(--color-intro-bg);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   padding-top: 5rem;
   padding-bottom: 13rem;
   text-align: center;
   background-image: url("../images/bg-curvy-desktop.svg");
   background-repeat: no-repeat;
   background-position: bottom;
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @include layout-constrain;
+  }
 
   &__graphic {
     width: 45rem;
@@ -38,6 +42,10 @@
     font-family: var(--ff-heading);
     margin-top: 2rem;
     line-height: 3.75rem;
+
+    @media (max-width: $bp-6) {
+      line-height: 2.5rem;
+    }
   }
 
   &__paragraph {
