@@ -1,4 +1,4 @@
-@use "../abstracts/mixins" as *;
+@use "../abstracts/" as *;
 
 .footer {
   padding-top: 14.5rem;
@@ -13,10 +13,29 @@
     grid-template-areas:
       "logo . ."
       "details nav socials";
+
+    @media (max-width: $bp-1) {
+      grid-template-columns: 1fr;
+      grid-template-areas: "logo" "details" "nav" "socials";
+      justify-items: center;
+      grid-gap: 3rem;
+    }
+
+    @media (max-width: $bp-5) {
+      justify-items: start;
+    }
   }
 
   &__logo {
     margin-bottom: 2rem;
+
+    @media (max-width: $bp-1) {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: $bp-6) {
+      width: 8rem;
+    }
   }
 
   &__details {
@@ -28,6 +47,11 @@
     grid-row-gap: 1.5rem;
     font-size: var(--fs-4);
     line-height: var(--lh-2);
+
+    @media (max-width: $bp-4) {
+      grid-template-columns: 1fr;
+      max-width: 25rem;
+    }
 
     li {
       display: flex;
@@ -47,12 +71,25 @@
     grid-area: nav;
     margin-left: 7rem;
 
+    @media (max-width: $bp-1) {
+      margin-left: 0;
+    }
+
     ul {
       list-style-type: none;
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 1rem;
       grid-column-gap: 5rem;
+
+      @media (max-width: $bp-1) {
+        display: flex;
+        gap: 2rem;
+      }
+
+      @media (max-width: $bp-5) {
+        flex-direction: column;
+      }
     }
 
     a {
@@ -86,6 +123,10 @@
     justify-self: end;
     display: flex;
     gap: 1rem;
+
+    @media (max-width: $bp-1) {
+      justify-self: center;
+    }
 
     a {
       border: 1px solid var(--color-white);

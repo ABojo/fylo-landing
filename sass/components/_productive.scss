@@ -1,4 +1,4 @@
-@use "../abstracts/mixins" as *;
+@use "../abstracts/" as *;
 
 .productive {
   @include layout-constrain;
@@ -7,6 +7,32 @@
   grid-template-columns: max-content 1fr;
   align-items: center;
   grid-gap: 5rem;
+
+  @media (max-width: $bp-3) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    grid-gap: 2rem;
+  }
+
+  @media (max-width: $bp-5) {
+    justify-items: start;
+    text-align: left;
+  }
+
+  &__graphic {
+    @media (max-width: $bp-2) {
+      width: 25rem;
+    }
+
+    @media (max-width: $bp-5) {
+      justify-self: center;
+    }
+
+    @media (max-width: $bp-6) {
+      width: 100%;
+    }
+  }
 
   &__text {
   }
@@ -17,6 +43,14 @@
     margin-bottom: 2rem;
     max-width: 22rem;
     margin-top: 5rem;
+
+    @media (max-width: $bp-3) {
+      margin-inline: auto;
+    }
+
+    @media (max-width: $bp-5) {
+      margin-inline: 0;
+    }
   }
 
   &__paragraph {

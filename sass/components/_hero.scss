@@ -1,3 +1,5 @@
+@use "../abstracts/" as *;
+
 .hero {
   background-color: var(--color-intro-bg);
   display: flex;
@@ -13,6 +15,19 @@
 
   &__graphic {
     width: 45rem;
+
+    @media (max-width: $bp-4) {
+      width: 35rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: $bp-5) {
+      width: 25rem;
+    }
+
+    @media (max-width: $bp-6) {
+      width: 100%;
+    }
   }
 
   &__heading {

@@ -7,6 +7,8 @@
 @use "./components/early";
 @use "./components/footer";
 
+@use "./abstracts/" as *;
+
 :root {
   --color-intro-bg: hsl(217, 28%, 15%);
   --color-main-bg: hsl(218, 28%, 13%);
@@ -38,6 +40,12 @@
 
   --layout-max-width: 80rem;
   --layout-width: 90%;
+
+  @media (max-width: $bp-5) {
+    --fs-1: 2rem;
+    --fs-2: 1.75rem;
+    --fs-3: 1.1rem;
+  }
 }
 
 *,
